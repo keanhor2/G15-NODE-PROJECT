@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 }= require('uuid');
 
 // link to path of the database
 const PATH = ('./database/data.json');
@@ -11,7 +11,7 @@ function getDataOfitems(){
 
 // save data of items
 function saveDataOfitems(items){
-    fs.writeFileSync(PATH, JSON.stringify(items,null,4));
+    fs.writeFileSync(PATH, JSON.stringify(items,null,2));
 }
 
 // get all question of quiz
@@ -21,25 +21,27 @@ function getQuestions(){
 }
 
 // create question in quiz 
-function createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newCorrectAnswer){
-    // get all question
-    let  getItems = getDataOfitems();
-    // define id 
-    
-    
-    // create new question 
-    let newQuestion = {"id":uuidv4(),"question":newQuestions, "answers":[newAnswer1,newAnswer2,newAnswer3,newAnswer4],"correctAnswer":newCorrectAnswer}
-    for(let item of getItems){
-        let question = item.quiz;
-        question.push(newQuestion)
+function createQuestion(title,answer1,answer2,answer3,answer4,score,correctAnswer){
+    //read items
+    let getItems = getDataOfitems();
+    // create new question and answers
+    let item = 
+    {"id":uuidv4(),
+    "title":title,
+    "answer1":answer1,
+    "answer2":answer2,
+    "answer3":answer3,
+    "answer4":answer4,
+    "score":score,
+    "correctAnswer":correctAnswer
     }
-    //save data
+    getItems.push(item);
+
+    //save data again
     saveDataOfitems(getItems);
 }
 // remove data one by one 
 
-
-// update in question
 
 module.exports=
 {

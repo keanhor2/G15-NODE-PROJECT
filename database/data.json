@@ -1,71 +1,20 @@
 [
-    {
-        "Quiz": "name",
-        "quiz": [
-            {
-                "question": "kkdfdkfdjf",
-                "answers": [
-                    "answer1",
-                    "answer2",
-                    "answer3",
-                    "answer4"
-                ],
-                "correctAnswer": "A"
-            },
-            {
-                "question": "newQuestions",
-                "answers": [
-                    "newAnswer1",
-                    "newAnswer2",
-                    "newAnswer3",
-                    "newAnswer4"
-                ],
-                "correctAnswer": "newCorrectAnswer"
-            },
-            {
-                "id": 1,
-                "question": "newQuestions",
-                "answers": [
-                    "newAnswer1",
-                    "newAnswer2",
-                    "newAnswer3",
-                    "newAnswer4"
-                ],
-                "correctAnswer": "newCorrectAnswer"
-            },
-            {
-                "id": 1,
-                "question": "newQuestions",
-                "answers": [
-                    "newAnswer1",
-                    "newAnswer2",
-                    "newAnswer3",
-                    "newAnswer4"
-                ],
-                "correctAnswer": "newCorrectAnswer"
-            },
-            {
-                "id": 1,
-                "question": "newQuestions",
-                "answers": [
-                    "newAnswer1",
-                    "newAnswer2",
-                    "newAnswer3",
-                    "newAnswer4"
-                ],
-                "correctAnswer": "newCorrectAnswer"
-            },
-            {
-                "id": "8f178bce-406f-44cd-a2d0-fa6b9341193e",
-                "question": "newQuestions",
-                "answers": [
-                    "newAnswer1",
-                    "newAnswer2",
-                    "newAnswer3",
-                    "newAnswer4"
-                ],
-                "correctAnswer": "newCorrectAnswer"
-            }
-        ]
-    }
+  {
+    "id": "6ef17eac-f8e2-40c9-ae05-95c461924c68",
+    "title": "kke"
+  },
+  {
+    "id": "3ff81f7b-e18f-455a-85e9-56116cb2dfbf",
+    "score": "A"
+  },
+  {
+    "id": "fc7a4c5f-d58a-4720-a01f-675fbc7cd2f5",
+    "title": "kke",
+    "answer1": "kek",
+    "answer2": "ekk",
+    "answer3": "dkk",
+    "answer4": "kdk",
+    "score": 33,
+    "correctAnswer": "A"
+  }
 ]

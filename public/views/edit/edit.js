@@ -17,3 +17,8 @@ const URL = ""
 function getURL() {
     alert("The URL of this page is: " + window.location.href);
 }
+
+
+// request
+const url = "http://localhost/api/items"
+
