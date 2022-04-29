@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>app-quiz</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <div class="header">
+        <ul class="users_lo">
+            <li>
+                <i class="fa fa-bars fa-2x"></i>
+            </li>
+            <div class="login">
+                <a class="users" href="">Login</a>
+                <a class="users" href="">Log-out</a>
+            </div>
+        </ul>
+    </div>
+
+
+    <div class="container" id="container">
+        <div class="welcome">Quiz-app</div>
+        <div class="quiz">
+            <img class="image_start" src="images/Quiz-680x380.jpg" alt="">
+        </div>
+        <div class="start_button">
+            <div class="start_exit" ><button class="start_to" >Exit</button></div>
+            <div class="start_next"><button class="start_to" id="start_page">Next</button></div>
+        </div>
+    </div>
+
+    <div class="home_quiz">
+        <div class="quiz_image">
+            <img class="homes" src="images/home.jpg" alt="">
+        </div>
+        <div class="button_plays">
+            <div class="play"><button class="home_play" id="display_quiz" ><a href="views/edit/edit.html">Play</a></button></div>
+            <div class="create"><button class="home_play">Create-quiz</button></div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="contain_form">
+        <form action="">
+            <div class="user_login">
+                <div class="sign_lo">LOGIN</div>
+                <input type="text" name="Email" placeholder="Email"><br>
+                <input type="text" name="passwork" placeholder="Passwork">
+            </div>
+            <div class="submit">
+                <button class="bubmits">lOGIN</button>
+            </div>
+            <div class="requests">
+                <button class="Request">Request</button>
+            </div>
+        </form>
+        <!--  -->
+    </div>
     
+
+
 </body>
 <link rel="stylesheet" href="CSS/main.css">
 <script src="js/main.js"></script>
+<script src="views/edit/edit.js"></script>
+
 </html>

@@ -1,0 +1,169 @@
+    body {
+        background: rgb(162, 162, 162);
+        margin: 0%;
+        padding: 0px 5px;
+    }
+    /* ====================== */
+    /* ======================= */
+    
+    .header {
+        position: sticky;
+        top: 0;
+    }
+    
+    .users_lo {
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ul li {
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    .users {
+        font-size: 20px;
+        padding: 0px 4px;
+        font-family: sans-serif;
+        text-decoration: dashed;
+        position: unset;
+    }
+    /* First start home */
+    .welcome{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 40px;
+        padding: 35px 0px;
+    }
+    .container {
+        margin-top: 100px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .quiz,
+    .image_start {
+        display: flex;
+        margin: auto;
+        width: 70%;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    
+    .start_button,
+    .star_exit .start_next {
+        display: flex;
+        width: 930px;
+        margin: auto;
+        font-size: 25px;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .start_to {
+        width: 200px;
+        height: 4vh;
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 5px;
+    }
+    /* home page to quiz display */
+    
+    .home_quiz {
+        margin-top: 20px;
+    }
+    .home_quiz{
+        margin-top: 300px;
+    }
+    .quiz_image,
+    .homes {
+        display: flex;
+        margin: auto;
+        width: 300px;
+        border-radius: 4px;
+    }
+    
+    .button_plays {
+        width: 400px;
+        margin: auto;
+        text-align: center;
+        font-size: 25px;
+        justify-content: space-between;
+    }
+    
+    .play .create,
+    .home_play {
+        margin-top: 6px;
+        width: 150px;
+        height: 4vh;
+        font-size: 20px;
+    }
+    .home_play a{
+        text-decoration: none;
+    }
+    .contain_form {
+        background: grey;
+        width: 45%;
+        margin: auto;
+        border-radius: 5px;
+    }
+    
+    .user_login {
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .sign_lo {
+        background: grey;
+        width: 700px;
+        height: 5vh;
+        display: flex;
+        font-size: 25PX;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    input[type=text],
+    input[type=text] {
+        width: 700px;
+        padding: 12px 20px;
+        margin: 10px 0;
+        margin-top: 0%;
+        font-size: 18px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .submit,
+    .bubmits {
+        display: flex;
+        margin: auto;
+        width: 700px;
+        height: 5vh;
+        font-size: 18px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .requests,
+    .Request {
+        display: flex;
+        width: 400px;
+        height: 4vh;
+        font-size: 18PX;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    

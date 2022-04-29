@@ -1,0 +1,51 @@
+/* ------------ Place to display question------- */
+.text_show{
+    display: flex;
+    margin: auto;
+    width: 500px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.question{
+    margin: auto;
+} 
+.question{
+    margin-top: 20px;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(222, 222, 222);
+    border: solid 1px rgb(112, 112, 112);
+}
+.title_quiz,.name_text{
+    font-size: 23px;
+}
+.answers,.que_one,.que_two,.que_three,.que_four{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.title_quiz,.answers{
+    margin-top: 10px;
+    padding: 5px 25px;
+}
+.icons{
+    display: flex;
+    justify-content:flex-end;
+}
+.icons,.icons{
+    padding: 2px 5px;
+}
+
+.next_quiz{
+    display: flex;
+    justify-content: flex-end;
+}
+.next_quizs{
+    width: 100px;
+    height: 3vh;
+    font-size: 18px;
+}

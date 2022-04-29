@@ -1,0 +1,121 @@
+
+/* create question ---------------File EDite-----*/
+    
+.create_quiz {
+    width: 50%;
+    margin: auto;
+    border-radius: 3px;
+    background: rgb(200, 200, 200);
+}
+
+.text_show {
+    font-size: 25px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(166, 166, 166);
+}
+
+input[type=quize] {
+    padding: 20px;
+    width: 900px;
+    height: 3.5vh;
+    font-size: 18px;
+    padding: 3px 3px;
+}
+
+.anser1,
+.anser2 {
+    display: flex;
+    /* margin: auto; */
+    margin-top: 25px;
+    padding: 3px 3px;
+}
+
+input[type=quest] {
+    align-items: center;
+    width: 300px;
+    height: 3vh;
+    margin: auto;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+
+.adds{
+    display: flex;
+    width: 100px;
+    height: 4vh;
+    padding: 2px 2px;
+    font-size: 20px;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
+.oder{
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: flex-end;
+}
+.Options{
+    height: 3vh;
+    width: 60px;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+}
+.addscore,.score_chose{
+    width: 50px;
+}
+/* input[type=quest] {
+width: 500px;
+} */
+
+/* place display from create */
+.text_show{
+    display: flex;
+    margin: auto;
+    width: 950px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.question{
+    margin: auto;
+} 
+.question{
+    margin-top: 20px;
+    width: 950px;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+    background: rgb(222, 222, 222);
+    border: solid 1px rgb(112, 112, 112);
+}
+.title_quiz,.name_text{
+    font-size: 23px;
+}
+.answers,.que_one,.que_two,.que_three,.que_four{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.title_quiz,.answers{
+    margin-top: 10px;
+    padding: 5px 25px;
+}
+.icons{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.cons{
+    width: 40px;
+    justify-content: space-between;
+    padding: 4px 4px;
+}
