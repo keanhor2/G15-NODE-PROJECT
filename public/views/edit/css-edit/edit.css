@@ -119,3 +119,13 @@ width: 500px;
     justify-content: space-between;
     padding: 4px 4px;
 }
+.buutonShow{
+    margin-top: 30px;
+}
+.buutonShows{
+    display: flex;
+    margin-left: 475px;
+    text-align: center;
+    justify-content: center;
+    
+}

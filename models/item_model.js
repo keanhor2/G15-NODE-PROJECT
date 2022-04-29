@@ -45,6 +45,5 @@ module.exports=
 {
     getQuestions,
     createQuestion,
-    removeQuestion
 }
 
