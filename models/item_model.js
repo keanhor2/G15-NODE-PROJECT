@@ -39,7 +39,8 @@ function createQuestion(title,answer1,answer2,answer3,answer4,score,correctAnswe
 
     //save data 
     saveDataOfitems(getItems);
-}
+    return true;
+};
 // remove data one by one 
 function removeQuestion(id){
      //read items
@@ -58,6 +59,5 @@ module.exports=
 {
     getQuestions,
     createQuestion,
-    removeQuestion
 }
 

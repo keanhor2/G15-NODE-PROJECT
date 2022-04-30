@@ -22,7 +22,7 @@ router.post('/',(req,res) => {
     let isCreated = itemModel.createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newScore,newCorrectAnswer);
     console.log(newQuestions)
     if(isCreated){
-        res.status(200),send
+        res.status(200).send
         (
             {"message":"Question created successfully"}
         )
