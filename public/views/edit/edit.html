@@ -5,78 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css-edit/edit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    
+  
     <div class="create_quiz">
         <div class="text_show">Create-quiz</div>
         <form action="">
             <div class="title_quiz">
-                <input type="quize" name="title" placeholder="Title">
+                <input type="quize" name="title" placeholder="Title" class="title" id="question">
             </div>
             <div class="answers">
                 <div class="anser1">
-                    <input type="quest" name="question" placeholder="Answer1">
-                    <input type="quest" name="question" placeholder="Answer2">
+                    <input type="quest" name="question" placeholder="Answer1" class="answer1" id="answer_a">
+                    <input type="quest" name="question" placeholder="Answer2" class="answer2" id="answer_b">
                 </div>
                 <br>
                 <div class="anser2">
-                    <input type="quest" name="question" placeholder="Answer3">
-                    <input type="quest" name="question" placeholder="Answer4">
+                    <input type="quest" name="question" placeholder="Answer3" class="answer3" id="answer_c">
+                    <input type="quest" name="question" placeholder="Answer4" class="answer4" id="answer_d">
                 </div>
             </div>
         </form>
-     
+    
         
         <div class="option">
-            <div class="option"><button class="Options">Option</button></div>
+            <div class="options">Option</div>
             <form action="/action_page.php">
                 <input class="score_chose" list="browsers" name="browser">
                 <datalist id="browsers">
-                <option value="5">
-                <option value="8">
-                <option value="10">
-                <option value="12">
-                <option value="14">
+                <option value="A">
+                <option value="B">
+                <option value="C">
+                <option value="D">
                 </datalist>
             </form>
-        <div class="addscore">
-            <form  action="/action_page.php"
-            oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-            <input class="addscore" type="number" id="b" name="b" value="1">
-            <output name="x" for="a b"></output>
-            </form>
-        </div>
+            <div class="score">
+                <input type="number" class="number">
+            </div>
         </div>
 
-        <div class="oder">
-            <div class="add"><button class="adds">ADD+</button></div>
+        <div class="button">
+            <button class="cancel">Cancel</button>
+            <button class="adds" id="addss">Create</button>
         </div>
-
     </div>
-    <div class="buutonShow"><button class="buutonShows">Create-quiz</button></div>
+    <div class="dataQuiz">
+        <div class="buttonShow" id="buttonshowss"><button class="buttonShows">Create-quiz</button></div>
+        <div id="dataquiz"><button class="showDataquiz" id="dataquizs"><a href="../play/play.html">Home</a></button></div>
+    </div>
 <!-- place display form create -->
-    <div class="question">
-        <div class="title_quiz">
-            <div class="name_text">What is the HTML stand for ?</div>
-        </div>
-        
-        <div class="answers">
-            <div class="que_one">hhhhhhsf</div>
-            <div class="que_two">Takkkeikdf</div>
-            <div class="que_three">HKJKEKD</div>
-            <div class="que_four">Speaking</div>
-        </div>
-        <div class="icons">
-            <i class="fa fa-pencil fa-2x cons"></i>
-            <i class="fa fa-trash-o fa-2x cons"></i>
-        </div>
-    </div>
+<div id="container" class="containerss">
 
-
+</div>
 </body>
 <script src="edit.js"></script>
 </html>

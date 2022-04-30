@@ -8,37 +8,30 @@ const itemModel = require("../models/item_model");
 router.get('/',(req,res) => {
     let questions = itemModel.getQuestions();
     res.send(questions);
-    if(questions.length>0){
-        res.send(questions);
-    }else{
-        res.send({"message":"Request error"})
-    }
 })
-
-// read one items
 
 //write items
 router.post('/',(req,res) => {
-    let newQuestion = req.body.question;
-    let newAnswer1 = req.body.answers[0];
-    let newAnswer2 = req.body.answers[1];
-    let newAnswer3 =req.body.answers[2];
-    let newAnswer4 = req.body.answers[3];
-    // let newScore = req.body.score;
+    let newQuestions = req.body.title;
+    let newAnswer1 = req.body.answer1;
+    let newAnswer2 = req.body.answer2;
+    let newAnswer3 =req.body.answer3;
+    let newAnswer4 = req.body.answer4;
+    let newScore = req.body.score;
     let newCorrectAnswer = req.body.correctAnswer;
-    itemModel.createQuestion(newQuestion,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newCorrectAnswer);
-    res.send("SUCCESSFUL");
-    // if(isCreated){
-    //     res.status(200),send
-    //     (
-    //         {"message":"Question created successfully"}
-    //     )
-    // }else{
-    //     res.status(404).send
-    //     (
-    //         {"message":"All field required"}
-    //     )
-    // }
+    let isCreated = itemModel.createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newScore,newCorrectAnswer);
+    console.log(newQuestions)
+    if(isCreated){
+        res.status(200).send
+        (
+            {"message":"Question created successfully"}
+        )
+    }else{
+        res.status(404).send
+        (
+            {"message":"All field required"}
+        )
+    }
 })
 
 // delete data in items
