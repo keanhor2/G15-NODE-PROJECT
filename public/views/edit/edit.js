@@ -10,15 +10,3 @@ function displayQuiz(){
 // let display_quiz = document.querySelector(".display_quiz");
 let showCreate = document.querySelector(".buutonShow");
 showCreate.addEventListener("click",displayQuiz);
-
-
-const URL = ""
-
-function getURL() {
-    alert("The URL of this page is: " + window.location.href);
-}
-
-
-// request
-const url = "http://localhost/api/items"
-

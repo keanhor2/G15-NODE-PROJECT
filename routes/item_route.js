@@ -20,7 +20,7 @@ router.post('/',(req,res) => {
     let newScore = req.body.score;
     let newCorrectAnswer = req.body.correctAnswer;
     let isCreated = itemModel.createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newScore,newCorrectAnswer);
-
+    console.log(newQuestions)
     if(isCreated){
         res.status(200),send
         (
@@ -35,6 +35,15 @@ router.post('/',(req,res) => {
 })
 
 // delete data in items
+router.delete("/:id",(req, res)=>{
+    let id = req.params.id;
+    let isDeleteQuestion = itemModel.removeQuestion(id);
+    if(isDeleteQuestion){
 
+        res.status(200).send({"message":"Deleted Question successfully"});
+    }else{
+        res.status(404).send({"message":"id not found"});
+    }
+})
 
 module.exports = router;

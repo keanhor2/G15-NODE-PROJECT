@@ -15,17 +15,17 @@
         <div class="text_show">Create-quiz</div>
         <form action="">
             <div class="title_quiz">
-                <input type="quize" name="title" placeholder="Title">
+                <input type="quize" id="question" name="title" placeholder="Title">
             </div>
             <div class="answers">
                 <div class="anser1">
-                    <input type="quest" name="question" placeholder="Answer1">
-                    <input type="quest" name="question" placeholder="Answer2">
+                    <input type="quest" id="answer_a" name="question" placeholder="Answer1">
+                    <input type="quest" id="answer_b"  name="question" placeholder="Answer2">
                 </div>
                 <br>
                 <div class="anser2">
-                    <input type="quest" name="question" placeholder="Answer3">
-                    <input type="quest" name="question" placeholder="Answer4">
+                    <input type="quest" id="answer_c"  name="question" placeholder="Answer3">
+                    <input type="quest" id="answer_d"  name="question" placeholder="Answer4">
                 </div>
             </div>
         </form>
@@ -44,10 +44,10 @@
                 </datalist>
             </form>
         <div class="addscore">
-            <form  action="/action_page.php"
-            oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <form 
+    
             <input class="addscore" type="number" id="b" name="b" value="1">
-            <output name="x" for="a b"></output>
+        
             </form>
         </div>
         </div>
@@ -58,22 +58,12 @@
 
     </div>
 <!-- place display form create -->
-    <div class="question">
-        <div class="title_quiz">
-            <div class="name_text">What is the HTML stand for ?</div>
+        <div id="questionList">
+            
         </div>
-        <div class="answers">
-            <div class="que_one">hhhhhhsf</div>
-            <div class="que_two">Takkkeikdf</div>
-            <div class="que_three">HKJKEKD</div>
-            <div class="que_four">Speaking</div>
-        </div>
-        <div class="icons">
-            <i class="fa fa-pencil fa-2x cons"></i>
-            <i class="fa fa-trash-o fa-2x cons"></i>
-        </div>
-    </div>
+    
 
+    </div>
 
 </body>
 <script src="edit.js"></script>

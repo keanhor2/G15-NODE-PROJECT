@@ -37,12 +37,23 @@ function createQuestion(title,answer1,answer2,answer3,answer4,score,correctAnswe
     }
     getItems.push(item);
 
-    //save data again
+    //save data 
     saveDataOfitems(getItems);
 }
 // remove data one by one 
+function removeQuestion(id){
+     //read items
+    let getItems = getDataOfitems();
+    // define id each questions
 
-
+    let index = getItems.findIndex(item => item.id === id);
+    console.log(index);
+    if(index !== -1){
+        getItems.splice(index, 1);
+    }
+    //save data
+    saveDataOfitems(getItems);
+}
 module.exports=
 {
     getQuestions,
