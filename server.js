@@ -6,7 +6,7 @@ app.use(cors({origin:"*"}));
 const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended : true }));
 app.use(express.json());
-app.listen(PORT,()=> console.log("Server runing on port: " + PORT));
+app.listen(PORT,()=> console.log("http://localhost:" + PORT));
 //connect to frontend
 app.use(express.static("public"));
 

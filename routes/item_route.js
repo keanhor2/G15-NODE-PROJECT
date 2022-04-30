@@ -35,7 +35,16 @@ router.post('/',(req,res) => {
 })
 
 // delete data in items
+router.delete("/:id",(req, res)=>{
+    let id = req.params.id;
+    let isDeleteQuestion = itemModel.removeQuestion(id);
+    if(isDeleteQuestion){
 
+        res.status(200).send({"message":"Deleted Question successfully"});
+    }else{
+        res.status(404).send({"message":"id not found"});
+    }
+})
 
 
 module.exports = router;
