@@ -68,7 +68,7 @@ function refreshDom(questions){
         let trash = document.createElement("i");
         trash.className = "fa fa-trash-o fa-2x cons";
         trash.id="delete";
-        trash.addEventListener("click",removeQuestion)
+        trash.addEventListener("click",updateQuestion)
         
         title.appendChild(textOfTitle);
         
@@ -154,12 +154,9 @@ function updateQuestion(e){
 
 //action for clik noe place of input-----------
 function hidShowInput(){
-    
     noneData.style.display="block";
     create_quiz.style.display="none";
     buttonshowss.style.display="block";
-    
-
 }
 
 let adds = document.getElementById("addss");
