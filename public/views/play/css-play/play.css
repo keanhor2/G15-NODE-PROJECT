@@ -1,51 +1,104 @@
+
 /* ------------ Place to display question------- */
-.text_show{
+.inQuiz{
+    margin-top: 20px;
     display: flex;
-    margin: auto;
-    width: 500px;
-    font-size: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    justify-content: center;
+    font-size: 40px;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
+
+.exit{
+    display: flex;
+    width:70px;
+    font-size: 20px;
+    align-items:center;
+    text-align: center;
+    margin: 20px 430px 15px;
+    justify-content: center;
+}
+.exit,a{
+    text-decoration: none;
+    
+}
+#container{
+    width: 70%;
+    margin: auto;
+    padding:20px;
+    background-color:rgb(163, 173, 182);
+    border-radius: 15px;
+}
+
+
 .question{
     margin: auto;
 } 
 .question{
-    margin-top: 20px;
+    display: flex;
     width: 1000px;
+    height: 5vh;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    background: rgb(222, 222, 222);
-    border: solid 1px rgb(112, 112, 112);
+    border-radius: 5px;
+    background: rgb(230, 230, 230);
 }
-.title_quiz,.name_text{
-    font-size: 23px;
-}
-.answers,.que_one,.que_two,.que_three,.que_four{
-    font-size: 20px;
-    margin-top: 5px;
-}
-.title_quiz,.answers{
-    margin-top: 10px;
-    padding: 5px 25px;
-}
-.icons{
+#title{
     display: flex;
-    justify-content:flex-end;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 10px;
+    font-size:26px;
+    height: 2vh;
 }
-.icons,.icons{
-    padding: 2px 5px;
+#answers{
+   
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    /* border-radius: 20px; */
+
 }
 
-.next_quiz{
+#A,#B,#C,#D{
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding:1em;
+    width: 700px;
+    height: 4vh;
+    border: none;
+    font-size: 22px;
+    margin-top: 15px;
 }
-.next_quizs{
-    width: 100px;
-    height: 3vh;
-    font-size: 18px;
+
+.showbar{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+}
+
+#lengthQuestion{
+    font-size: 40px;
+}
+
+#A:hover{
+    background: rgb(214, 232, 232);
+}
+#B:hover{
+    background: rgb(214, 232, 232);
+}
+#C:hover{
+    background: rgb(214, 232, 232);
+}
+
+#D:hover{
+    background: rgb(214, 232, 232);
 }

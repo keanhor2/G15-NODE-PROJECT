@@ -1,4 +1,8 @@
+const { text } = require('express');
 const express = require('express');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
+const { append } = require('express/lib/response');
 const router = express.Router();
 
 const itemModel = require("../models/item_model");
@@ -38,13 +42,21 @@ router.post('/',(req,res) => {
 router.delete("/:id",(req, res)=>{
     let id = req.params.id;
     let isDeleteQuestion = itemModel.removeQuestion(id);
+    console.log(isDeleteQuestion);
     if(isDeleteQuestion){
-
-        res.status(200).send({"message":"Deleted Question successfully"});
+        res.send({"message":"Deleted Question successfully"});
     }else{
-        res.status(404).send({"message":"id not found"});
+        res.send({"message":"id not found"});
     }
 })
 
+//Update the Data in Items--------
+router.patch("/:id",(req,res)=>{
+    let id= req.params.id;
+    let isUpdate = itemModel.updateQuestion(req.body,id)
+    if(isUpdate){
+        res.send({"message":"updated"})
+    }
+})
 
 module.exports = router;
