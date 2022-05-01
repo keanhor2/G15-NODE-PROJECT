@@ -55,10 +55,48 @@ function removeQuestion(id){
     //save data
     saveDataOfitems(getItems);
 }
+
+
+// Update the Items in Data
+
+function updateQuestion(item,id){
+    // read all data
+    let getItems = getDataOfitems();
+    // define id to update question
+    let index = getItems.findIndex(item => item.id===id);
+    if (index !==-1){
+        let newItem = getItems[index];
+        if(item.title !== undefined){
+            newItem.title = item.title
+        }
+        if(item.answer1 !== undefined){
+            newItem.answer1 = item.answer1
+        }
+        if(item.answer2 !== undefined){
+            newItem.answer2 = item.answer2
+        }
+        if(item.answer3 !== undefined){
+            newItem.answer3 = item.answer3
+        }
+        if(item.answer4 !== undefined){
+            newItem.answer4 = item.answer4
+        }
+        if(item.score !== undefined){
+            newItem.score = item.score
+        }
+        if(item.correctAnswer !== undefined){
+            newItem.correctAnswer = item.correctAnswer
+        }
+    }
+    //save data
+    saveDataOfitems(getItems);
+}
+
 module.exports=
 {
     getQuestions,
     createQuestion,
-    removeQuestion
+    removeQuestion,
+    updateQuestion
 }
 

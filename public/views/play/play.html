@@ -5,20 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
+    <title>PLAY</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="../edit/css-edit/edit.css">
+    <link rel="stylesheet" href="css-play/play.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  quiz
-    <div class="create_quiz">
-    
+    <div class="inQuizs">You are in quiz right now</div>
+<button class="adds" id="addss"><a class="Home_link" href="../../index.html">Exit</a></button>
+
+<div id="container" class="containsers">
+  <!-- <div class="lenQuestion">
+    <h4>Question:</h4>
+    <div id="len">1/3</div>
+  </div>
+  <div class="score">
+    <h4>Score</h4>
+    <div id="score">12</div>
+  </div> -->
+    <div class="question" >
+        <div id="title">My Question </div>
     </div>
-        <button class="adds" id="addss">Create</button>
-        
-        <div id="container" class="containerss"></div>
+      <div id="answers">
+        <div>
+        <div class="answer1">
+          <button id = "A" onclick="checkAnswer('A')">Answer1</button>
+        </div>
+        <div class="answer2">
+          <button id = "B" onclick="checkAnswer('B')">Answer2</button>
+        </div>
+        <div class="answer3">
+          <button id = "C" onclick="checkAnswer('C')">Answer3</button>
+        </div>
+        <div class="answer4">
+          <button id = "D" onclick="checkAnswer('D')">Answer4</button>
+        </div>
+      </div>  
+    </div>
+  </div>
 </body>
 <script src="play.js"></script>
 </html>
