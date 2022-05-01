@@ -76,7 +76,7 @@ function refreshDom(questions){
         answer2.textContent = question.answer2;
 
         let answer3 = document.createElement("div");
-        answer3.className = "answerr_three";
+        answer3.className = "answer_three";
         answer3.textContent = question.answer3;
 
         let answer4 = document.createElement("div");
@@ -175,11 +175,5 @@ function updateQuestion(e){
     }
 }
 
-
-
-
-
-
-// none --------- about quiz in the container--------
 
 

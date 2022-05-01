@@ -1,5 +1,5 @@
     body {
-        background: rgb(162, 162, 162);
+        background: rgb(212, 212, 212);
         margin: 0%;
         padding: 0px 5px;
     }
@@ -49,15 +49,15 @@
     .image_start {
         display: flex;
         margin: auto;
-        width: 70%;
+        width: 65%;
         justify-content: center;
-        border-radius: 3px;
+        border-radius: 5px;
     }
     
     .start_button,
     .star_exit .start_next {
         display: flex;
-        width: 930px;
+        width: 800px;
         margin: auto;
         font-size: 25px;
         text-align: center;
@@ -74,17 +74,14 @@
     }
     /* home page to quiz display */
     
-    .home_quiz {
-        margin-top: 20px;
-    }
     .home_quiz{
-        margin-top: 300px;
+        margin-top: 150px;
     }
     .quiz_image,
     .homes {
         display: flex;
         margin: auto;
-        width: 300px;
+        width: 500px;
         border-radius: 4px;
     }
     
@@ -98,11 +95,30 @@
     
     .play .create,
     .home_play {
-        margin-top: 6px;
+        margin-top: 10px;
+        padding: 5px 5px;
         width: 150px;
         height: 4vh;
         font-size: 20px;
+    
     }
+    .exit{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .exits{
+        margin: 18px 8rem;
+        display: flex;
+        height: 4vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        width: 150px;
+
+    }
+
     .home_play a{
         text-decoration: none;
     }

@@ -99,10 +99,24 @@ width: 500px;
 }
 .title_quiz,.name_text{
     font-size: 23px;
+    width: 890px;
+    border-radius: 5px;
+    margin: auto;
+    background: rgb(160, 164, 164);
 }
-.answers,.answer_one,.answer_two,.answer_three,.answer_four{
+.answers{
+    width: 500px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.answer_one,.answer_two,.answer_three,.answer_four{
+    background: rgb(160, 164, 164);
+    border-radius: 5px;
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 8px;
+    padding: 5px 5px;
 }
 .title_quiz,.answers{
     margin-top: 10px;
