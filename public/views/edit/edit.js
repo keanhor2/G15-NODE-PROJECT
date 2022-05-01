@@ -62,6 +62,8 @@ function refreshDom(questions){
 
         let pencil = document.createElement("i");
         pencil.className = "fa fa-pencil fa-2x cons";
+        pencil.id="edit";
+        pencil.addEventListener("click",updateQuestion);
 
         let trash = document.createElement("i");
         trash.className = "fa fa-trash-o fa-2x cons";
@@ -95,7 +97,6 @@ document.body.appendChild(contain);
     // get question 
     function getQuestions() {
         axios.get("/api/items").then(items=>{
-            console.log(items.data);
             refreshDom(items.data);
         })
     }
@@ -112,6 +113,7 @@ document.body.appendChild(contain);
         console.log(item_new);
         getQuestions();
         
+        item_new.title ="";  
         // location.reload();
 }
 
@@ -122,7 +124,7 @@ function removeQuestion(e){
     if(e.target.id==="delete"){
   
         let id = e.target.parentElement.parentElement.id;
-            console.log(id)
+
         axios.delete("/api/items/"+id);
         getQuestions();
     }
@@ -130,7 +132,23 @@ function removeQuestion(e){
 
 const add = document.querySelector(".adds");
 add.addEventListener("click",creatItems);
-getQuestions()
+getQuestions();
+
+
+// function to Update the data ---------
+
+function updateQuestion(e){
+    e.preventDefault();
+    if(e.target.id==="edit"){
+        let id = e.target.parentElement.parentElement.id;
+        console.log(id)
+        axios.patch("/api/items/:id"+id);
+        
+        getQuestions();
+
+    }
+}
+
 
 
 
