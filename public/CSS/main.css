@@ -57,6 +57,7 @@
     .start_button,
     .star_exit .start_next {
         display: flex;
+        padding: 10px 10px;
         width: 800px;
         margin: auto;
         font-size: 25px;
@@ -75,13 +76,13 @@
     /* home page to quiz display */
     
     .home_quiz{
-        margin-top: 150px;
+        margin-top: 130px;
     }
     .quiz_image,
     .homes {
         display: flex;
         margin: auto;
-        width: 500px;
+        width: 400px;
         border-radius: 4px;
     }
     
@@ -101,6 +102,9 @@
         height: 4vh;
         font-size: 20px;
     
+    }
+    .exit,a{
+        text-decoration: none;
     }
     .exit{
         display: flex;

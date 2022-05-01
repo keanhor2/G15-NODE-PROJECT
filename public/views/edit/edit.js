@@ -23,6 +23,7 @@ function hidShowInput(){
     create_quiz.style.display="none";
    buttonShows.style.display="block";
    doncequiz.style.display="block";
+   window.location.reload();
 }    
 
 let adds = document.getElementById("addss");
