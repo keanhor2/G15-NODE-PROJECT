@@ -54,6 +54,7 @@ function removeQuestion(id){
     }
     //save data
     saveDataOfitems(getItems);
+    return true;
 }
 
 
@@ -90,6 +91,7 @@ function updateQuestion(item,id){
     }
     //save data
     saveDataOfitems(getItems);
+    return true
 }
 
 module.exports=

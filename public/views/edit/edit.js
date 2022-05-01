@@ -135,11 +135,12 @@ document.body.appendChild(contain);
         item_new.answer2 =document.getElementById('answer_b').value;
         item_new.answer3 =document.getElementById('answer_c').value;
         item_new.answer4 =document.getElementById('answer_d').value;
+        item_new.score = document.getElementById('score').value;
+        item_new.correctAnswer =document.getElementById('correctAnswers').value;
         axios.post("/api/items", item_new);
         console.log(item_new);
         getQuestions();
         
-        item_new.title ="";  
         // location.reload();
 }
 
@@ -148,10 +149,11 @@ document.body.appendChild(contain);
 function removeQuestion(e){
     e.preventDefault();
     if(e.target.id==="delete"){
-  
         let id = e.target.parentElement.parentElement.id;
-
-        axios.delete("/api/items/"+id);
+        let isExecuted = confirm("Are you sure to delete this question?");
+        if(isExecuted){
+            axios.delete("/api/items/"+id);
+        }
         getQuestions();
     }
 }
@@ -174,6 +176,5 @@ function updateQuestion(e){
 
     }
 }
-
 
 
