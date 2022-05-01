@@ -1,22 +1,48 @@
-
-
-let create_quiz=document.querySelector(".create_quiz");
 // start code here -----------------------
-let buttonshowss = document.getElementById("buttonshowss");
-let buttonshowsy = document.getElementById("dataQuiz");
-let noneData =document.querySelector("#dataquiz");
+let create_quiz=document.querySelector(".create_quiz");
 create_quiz.style.display="none";
+
 
 function displayQuiz(){
     create_quiz.style.display="block";
-    buttonshowss.style.display="none";
-    noneData.style.display="none"
-}
+    buttonShows.style.display="none";
+    doncequiz.style.display="none";
 
-// let display_quiz = document.querySelector(".display_quiz");
+    
+}    
 
 let showCreate = document.querySelector(".buttonShow");
 showCreate.addEventListener("click",displayQuiz);
+
+
+// ------------------------------
+let buttonShows = document.querySelector(".buttonShow");
+let doncequiz = document.querySelector(".doncequiz");
+
+function hidShowInput(){
+    create_quiz.style.display="none";
+   buttonShows.style.display="block";
+   doncequiz.style.display="block";
+}    
+
+let adds = document.getElementById("addss");
+let cancel = document.querySelector(".cancel")
+adds.addEventListener("click",hidShowInput);
+cancel.addEventListener("click",hidShowInput);
+
+
+
+//action for clik noe place of input-----------
+
+
+
+
+
+
+
+
+
+
 
 // create the dom------------------/////
 function refreshDom(questions){
@@ -152,33 +178,8 @@ function updateQuestion(e){
 
 
 
-//action for clik noe place of input-----------
-function hidShowInput(){
-    
-    noneData.style.display="block";
-    create_quiz.style.display="none";
-    buttonshowss.style.display="block";
-    
-
-}
-
-let adds = document.getElementById("addss");
-let cancel = document.querySelector(".cancel")
-adds.addEventListener("click",hidShowInput);
-cancel.addEventListener("click",hidShowInput);
 
 
 // none --------- about quiz in the container--------
-
-// constainerss.style.display="none"
-let constainers = document.querySelector("#container");
-let constainerss=document.querySelector(".containerss");
-function showHideQuestion (){
-    constainers.style.display="none";
-
-}
-
-let showDataquiz = document.querySelector("#dataquiz");
-showDataquiz.addEventListener("click",showHideQuestion);
 
 
