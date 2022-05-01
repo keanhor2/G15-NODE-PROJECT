@@ -30,24 +30,19 @@
                 </div>
             </div>
         </form>
-    
-        
-        <div class="option">
-            <div class="options">Option</div>
-            <form action="/action_page.php">
-                <input class="score_chose" list="browsers" name="browser">
-                <datalist id="browsers">
-                <option value="A">
-                <option value="B">
-                <option value="C">
-                <option value="D">
-                </datalist>
-            </form>
-            <div class="score">
-                <input type="number" class="number">
+            <div class="option">
+                <div id="option">option:</div>
+                <select id="correctAnswers">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                <div class="score">
+                    <input type="number" id="score" >
+                </div>
             </div>
         </div>
-
         <div class="button">
             <button class="cancel">Cancel</button>
             <button class="adds" id="addss">Create</button>

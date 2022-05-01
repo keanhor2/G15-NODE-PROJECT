@@ -158,6 +158,7 @@ function hidShowInput(){
     noneData.style.display="block";
     create_quiz.style.display="none";
     buttonshowss.style.display="block";
+    
 
 }
 

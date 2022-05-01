@@ -1,11 +1,9 @@
 // dom question
-
 const domQuestion= document.getElementById("title");
 const domAnswer1= document.getElementById("A");
 const domAnswer2= document.getElementById("B");
 const domAnswer3= document.getElementById("C");
 const domAnswer4= document.getElementById("D");
-
 const domLengthQuestion = document.getElementById("lengthOfQuestion");
 const domScore = document.getElementById("score");
 // get question to display
