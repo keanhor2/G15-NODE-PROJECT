@@ -14,43 +14,47 @@
   
     <div class="create_quiz">
         <div class="text_show">Create-quiz</div>
-        <form action="">
-            <div class="title_quiz">
-                <input type="quize" name="title" placeholder="Title" class="title" id="question">
-            </div>
-            <div class="answers">
-                <div class="anser1">
-                    <input type="quest" name="question" placeholder="Answer1" class="answer1" id="answer_a">
-                    <input type="quest" name="question" placeholder="Answer2" class="answer2" id="answer_b">
+            <form action="">
+                <div class="title_quiz">
+                    <input type="quize" name="title" placeholder="Title" class="title" id="question">
                 </div>
-                <br>
-                <div class="anser2">
-                    <input type="quest" name="question" placeholder="Answer3" class="answer3" id="answer_c">
-                    <input type="quest" name="question" placeholder="Answer4" class="answer4" id="answer_d">
+                <div class="answers">
+                    <div class="anser1">
+                        <input type="quest" name="question" placeholder=" A. Answer1" class="answer1" id="answer_a">
+                        <input type="quest" name="question" placeholder=" B.Answer2" class="answer2" id="answer_b">
+                    </div>
+                    <br>
+                    <div class="anser2">
+                        <input type="quest" name="question" placeholder=" C. Answer3" class="answer3" id="answer_c">
+                        <input type="quest" name="question" placeholder=" D. Answer4" class="answer4" id="answer_d">
+                    </div>
                 </div>
-            </div>
-        </form>
-            <div class="option">
-                <div id="option">option:</div>
-                <select id="correctAnswers">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                </select>
-                <div class="score">
-                    <input type="number" id="score" >
+                
+                <div class="option">
+                    <div id="option">option:</div>
+                    <select id="correctAnswers">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                    <div class="score">
+                        <input class="numbers" type="number" id="score" value = 0>
+                    </div>
                 </div>
+            </form>
+            <div class="button">
+                <button class="cancel">Cancel</button>
+                <button class="adds" id="addss">Create</button>
             </div>
-        </div>
-        <div class="button">
-            <button class="cancel">Cancel</button>
-            <button class="adds" id="addss">Create</button>
+
         </div>
     </div>
+  
+
     <div class="dataQuiz">
-        <div class="buttonShow" id=""><button class="buttonShows">Create-quiz</button></div>
-        <div id="dataquiz"><button class="buttonshowssshowDataquiz" id="dataquizs"><a href="../play/play.html">Home</a></button></div>
+        <div class="buttonShow"><button class="buttonShows">Create-quiz</button></div>
+        <div class="doncequiz"><button class="showDataquiz"><a href="../play/play.html">Done</a></button></div>
     </div>
 <!-- place display form create -->
 <div id="container" class="containerss">
