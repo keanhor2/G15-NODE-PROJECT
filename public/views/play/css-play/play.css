@@ -27,6 +27,7 @@
     width: 1000px;
     margin: auto;
     padding:28px;
+    border-top: solid 2px blue;
     background-color:rgb(148, 182, 189);
     border-radius: 10px;
 }

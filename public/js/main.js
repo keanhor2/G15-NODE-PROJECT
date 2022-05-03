@@ -23,12 +23,23 @@ let haderss = document.querySelector(".haderss");
 contain_form.style.display="none";
 haderss.style.display="none";
 
+
+// -------------------- check input in login-----------
+
+
+
+
+
+
+
 function get_help (){
     contain_form.style.display="none";
     homequiz.style.display="block";
     haderss.style.display="block";
-
+    
 }
 
 let get_helps = document.querySelector(".bubmitss");
 get_helps.addEventListener("click",get_help);
+
+

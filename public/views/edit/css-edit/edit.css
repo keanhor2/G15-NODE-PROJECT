@@ -33,7 +33,7 @@ body{
 }
 
 .create_quiz {
-    width: 50%;
+    width: 51%;
     margin: auto;
     border-radius: 3px;
     background: rgb(200, 200, 200);
@@ -55,24 +55,29 @@ body{
 input[type=quize] {
     display: flex;
     padding: 20px 20px;
-    width: 900px;
+    width: 1000px;
     height: 3.5vh;
     font-size: 18px;
     padding: 3px 3px;
 }
 .title_quiz{
+    width: 850px;
     display:flex;
+    border-radius: 4px;
+    height: 4vh;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: auto;
+    background: rgb(206, 206, 206);
 }
+
 .name_text{
     font-size: 23px;
     width: 1000px;
     border-radius: 5px;
     margin: auto;
-    background: rgb(160, 164, 164);
+
 }
 
 .anser1,
@@ -198,7 +203,7 @@ width: 500px;
 .dataQuiz{
     margin-top: 25px;
     display: flex;
-    width: 1425px;
+    width: 1410px;
     justify-content: space-between;
 }
 .dataQuiz,a{
@@ -219,7 +224,7 @@ width: 500px;
 .buttonShows{
     height: 4vh;
     display: flex;
-    margin-left: 475px;
+    margin-left: 465px;
     align-items: center;
     font-size: 17px;
     text-align: center;
@@ -245,7 +250,7 @@ width: 500px;
 .Update_the_data{
     padding: 20px 20px;
     width: 910px;
-    margin: 10px 480px;
+    margin: 10px 462px;
     border-radius: 4px;
     text-align: center;
     justify-content: center;

@@ -163,7 +163,7 @@ function creatItems() {
     console.log(item_new);
     getQuestions();
 
-    // location.reload();
+    location.reload();
 }
 
 // delete itme form database -----------
@@ -216,16 +216,8 @@ function updateQuestion(e) {
 
 }
 
+// Update the date Quiz
 
-// function updateQuestion(e) {
-//     e.preventDefault();
-//     if (e.target.id === "edit") {
-//         let id = e.target.parentElement.parentElement.id;
-//         // checkUpdate.textContent=id;
-//         axios.patch("/api/items/:id" + id);
-//         getQuestions();
-//     }
-// }
 
 
 
