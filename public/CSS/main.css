@@ -15,7 +15,7 @@
         margin: 0%;
         padding: 0%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     
     ul li {
@@ -126,10 +126,16 @@
     .home_play a{
         text-decoration: none;
     }
+    .placeLogin{
+        display: flex;
+    }
+
+
     .contain_form {
-        background: grey;
+        background: rgb(217, 236, 239);
         width: 45%;
-        margin: auto;
+        padding: 20px 20px;
+        margin: 250px 500px;
         border-radius: 5px;
     }
     
@@ -140,7 +146,7 @@
     }
     
     .sign_lo {
-        background: grey;
+        background: rgb(217, 236, 239);
         width: 700px;
         height: 5vh;
         display: flex;
@@ -164,13 +170,17 @@
         box-sizing: border-box;
     }
     
-    .submit,
-    .bubmits {
+    .bubmitss {
         display: flex;
-        margin: auto;
-        width: 700px;
-        height: 5vh;
+        margin: 20px 88px;
+        width: 680px;
+        height: 3.5vh;
+        border-radius: 5px;
         font-size: 18px;
+        background: rgb(242, 242, 242);
+        border: solid black 1px;
+        font-size: 20px;
+        padding: 5px 5px;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -178,6 +188,7 @@
     
     .requests,
     .Request {
+        padding: 10px 5px;
         display: flex;
         width: 400px;
         height: 4vh;

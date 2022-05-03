@@ -143,7 +143,7 @@ width: 500px;
     margin-top: 20px;
     width: 950px;
     align-items: center;
-    border-radius: 3px;
+    border-radius: 4px;
     justify-content: center;
     background: rgb(222, 222, 222);
     border: solid 1px rgb(176, 176, 176);
@@ -225,4 +225,65 @@ width: 500px;
     text-align: center;
     justify-content: center;
 }
+
+
+/* ---------------Update the data place------------------ */
+.update_data{
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(66, 160, 242);
+    text-align: center;
+    margin:50px 700px ;
+    font-size: 50px;
+}
+.upDate{
+    height: 3.5vh;
+    font-size: 18px;
+}
+
+.Update_the_data{
+    padding: 20px 20px;
+    width: 910px;
+    margin: 10px 480px;
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(169, 185, 185);
+}
+.checkUpdate{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.upDate{
+    width: 850px;
+}
+
+input[type=answer]{
+    width: 300px;
+    height: 3.5vh;
+    font-size: 16px;
+    text-align: center;
+    
+    margin: 5px 5px;
+}
+
+.upDate{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.upDatese{
+    margin-top: 10px;
+    font-size: 18px;
+    width: 200px;
+    height: 4vh;
+}
+
 

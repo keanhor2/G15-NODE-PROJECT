@@ -1,18 +1,19 @@
 // start code here -----------------------
-let create_quiz=document.querySelector(".create_quiz");
-create_quiz.style.display="none";
+let create_quiz = document.querySelector(".create_quiz");
+create_quiz.style.display = "none";
 
 
-function displayQuiz(){
-    create_quiz.style.display="block";
-    buttonShows.style.display="none";
-    doncequiz.style.display="none";
 
-    
-}    
+function displayQuiz() {
+    create_quiz.style.display = "block";
+    buttonShows.style.display = "none";
+    doncequiz.style.display = "none";
+
+
+}
 
 let showCreate = document.querySelector(".buttonShow");
-showCreate.addEventListener("click",displayQuiz);
+showCreate.addEventListener("click", displayQuiz);
 
 
 // ------------------------------
@@ -23,17 +24,20 @@ function hidShowInput(){
     create_quiz.style.display="none";
    buttonShows.style.display="block";
    doncequiz.style.display="block";
-   window.location.reload();
+//    window.location.reload();
 }    
 
 let adds = document.getElementById("addss");
 let cancel = document.querySelector(".cancel")
-adds.addEventListener("click",hidShowInput);
-cancel.addEventListener("click",hidShowInput);
+adds.addEventListener("click", hidShowInput);
+cancel.addEventListener("click", hidShowInput);
 
 
 
 //action for clik noe place of input-----------
+
+//Pencil clikSHow------------------
+
 
 
 
@@ -46,20 +50,21 @@ cancel.addEventListener("click",hidShowInput);
 
 
 // create the dom------------------/////
-function refreshDom(questions){
-
+function refreshDom(questions) {
     let container = document.getElementById('container');
-        container.remove();
-        let contain = document.createElement('div');
-        contain.id = 'container';
+    container.remove();
+    let contain = document.createElement('div');
+    contain.id = 'container';
     
-    questions.forEach(question => {
+    let questionId = 0
+    questions.forEach((question)=>{
+        questionId += 1;
         let newQuestion = document.createElement("div");
         newQuestion.className = "question";
-        newQuestion.id= question.id;
+        newQuestion.id = question.id;
 
-        let title= document.createElement("div");
-        title.className ="title_quiz";
+        let title = document.createElement("div");
+        title.className = "title_quiz";
 
         let textOfTitle = document.createElement("div");
         textOfTitle.className = "name_text";
@@ -67,115 +72,178 @@ function refreshDom(questions){
 
         let answers = document.createElement("div");
         answers.className = "answers";
+        answers.id = questionId;
 
         let answer1 = document.createElement("div");
         answer1.className = "answer_one";
+        answer1.id="A"
         answer1.textContent = question.answer1;
 
         let answer2 = document.createElement("div");
         answer2.className = "answer_two";
+        answer2.id="B"
         answer2.textContent = question.answer2;
 
         let answer3 = document.createElement("div");
         answer3.className = "answer_three";
+        answer3.id="C"
         answer3.textContent = question.answer3;
 
         let answer4 = document.createElement("div");
         answer4.className = "answer_four";
+        answer4.id="D"
         answer4.textContent = question.answer4;
 
-        let icons= document.createElement("div");
+        let icons = document.createElement("div");
         icons.className = "icons";
 
         let pencil = document.createElement("i");
         pencil.className = "fa fa-pencil fa-2x cons";
-        pencil.id="edit";
-        pencil.addEventListener("click",updateQuestion);
+        pencil.id = "edit";
+        // pencil.className="upDate";
+        // pecils.classList="upDates";
+        pencil.addEventListener("click", updateQuestion);
+
+
 
         let trash = document.createElement("i");
         trash.className = "fa fa-trash-o fa-2x cons";
-        trash.id="delete";
-        trash.addEventListener("click",removeQuestion)
-        
+        trash.id = "delete";
+        trash.addEventListener("click", removeQuestion)
+
         title.appendChild(textOfTitle);
-        
+
         contain.appendChild(newQuestion);
-        newQuestion .appendChild(title);
+        newQuestion.appendChild(title);
         newQuestion.appendChild(answers);
+
         answers.appendChild(answer1);
         answers.appendChild(answer2);
-        answers.appendChild(answer4);
         answers.appendChild(answer3);
+        answers.appendChild(answer4);
         newQuestion.appendChild(icons);
         icons.appendChild(pencil);
         icons.appendChild(trash);
 
-    //    console.log(newQuestion)
-    //    console.log(title);
-})
-document.body.appendChild(contain); 
+        //    console.log(newQuestion)
+        //    console.log(title);
+        document.body.appendChild(contain);
+        let goodAnswers = document.getElementById(questionId);
+        // console.log(goodAnswers);
 
+        for (let element of goodAnswers.childNodes) {
+            if (element.id == question.correctAnswer) {
+                element.style.background = "teal";
+            }else{
+                element.style.background = "brown"
+            }
+        }
+    });
 };
-// function getallquiz(){
-    //     refreshDom();
-    // }
-    
-    
-    // get question 
-    function getQuestions() {
-        axios.get("/api/items").then(items=>{
-            refreshDom(items.data);
-        })
-    }
-    
-    // create question-----------------------------//
-    function creatItems() {
-        let item_new = {};
-        item_new.title =document.getElementById('question').value;
-        item_new.answer1 =document.getElementById('answer_a').value;
-        item_new.answer2 =document.getElementById('answer_b').value;
-        item_new.answer3 =document.getElementById('answer_c').value;
-        item_new.answer4 =document.getElementById('answer_d').value;
-        item_new.score = document.getElementById('score').value;
-        item_new.correctAnswer =document.getElementById('correctAnswers').value;
-        axios.post("/api/items", item_new);
-        console.log(item_new);
-        getQuestions();
-        
-        // location.reload();
+
+
+// get question 
+function getQuestions() {
+    axios.get("/api/items").then(items => {
+        refreshDom(items.data);
+    })
+}
+
+// create question-----------------------------//
+function creatItems() {
+    let item_new = {};
+    item_new.title = document.getElementById('question').value;
+    item_new.answer1 = document.getElementById('answer_a').value;
+    item_new.answer2 = document.getElementById('answer_b').value;
+    item_new.answer3 = document.getElementById('answer_c').value;
+    item_new.answer4 = document.getElementById('answer_d').value;
+    item_new.score = document.getElementById('score').value;
+    item_new.correctAnswer = document.getElementById('correctAnswers').value;
+    axios.post("/api/items", item_new);
+    console.log(item_new);
+    getQuestions();
+
+    // location.reload();
 }
 
 // delete itme form database -----------
 
-function removeQuestion(e){
+function removeQuestion(e) {
     e.preventDefault();
-    if(e.target.id==="delete"){
+    if (e.target.id === "delete") {
         let id = e.target.parentElement.parentElement.id;
         let isExecuted = confirm("Are you sure to delete this question?");
-        if(isExecuted){
-            axios.delete("/api/items/"+id);
+        if (isExecuted) {
+            axios.delete("/api/items/" + id);
         }
         getQuestions();
     }
 }
 
+
 const add = document.querySelector(".adds");
-add.addEventListener("click",creatItems);
+add.addEventListener("click", creatItems);
 getQuestions();
 
 
 // function to Update the data ---------
+let contains = document.querySelector("#container");
+let tiltels = document.querySelector("#question");
 
-function updateQuestion(e){
+// let checkUpdate = document.querySelector(".checkUpdate");
+
+let hidcontainer =document.querySelector(".containerse");
+let createQuiz =document.querySelector(".createQuiz");
+let hidcreatequiz = document.getElementsByName("createQuestion");
+
+let dataquiz = document.querySelector(".dataQuiz");
+hodhidupDates=document.querySelector(".hodhidupDates");
+
+hidcontainer.style.display="none";
+
+function updateQuestion(e) {
     e.preventDefault();
-    if(e.target.id==="edit"){
+    if (e.target.id === "edit") {
+        hidcontainer.style.display="block";
+        createQuiz.style.display="none";
+        dataquiz.style.display="none";
+        hodhidupDates.style.display="none";
         let id = e.target.parentElement.parentElement.id;
-        console.log(id)
-        axios.patch("/api/items/:id"+id);
-        
+        // checkUpdate.textContent=id;
+        axios.patch("/api/items/:id" + id);
         getQuestions();
-
     }
+
 }
+
+
+// function updateQuestion(e) {
+//     e.preventDefault();
+//     if (e.target.id === "edit") {
+//         let id = e.target.parentElement.parentElement.id;
+//         // checkUpdate.textContent=id;
+//         axios.patch("/api/items/:id" + id);
+//         getQuestions();
+//     }
+// }
+
+
+
+
+// ------------------Update the datea-----------------
+// let containerse = document.querySelector(".containerse");
+
+
+// function hidUpdate(){
+//     containerse.style.display="none";;
+
+// }
+
+// let updatese = document.querySelector(".upDate");
+// updatese.addEventListener("click",hidShowInput);
+
+
+
+
 
 
