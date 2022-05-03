@@ -1,50 +1,38 @@
 // start code here -----------------------
 let create_quiz = document.querySelector(".create_quiz");
+let showCreate = document.querySelector(".buttonShow");
+let buttonShows = document.querySelector(".buttonShow");
+let doncequiz = document.querySelector(".doncequiz");
+
+let adds = document.getElementById("addss");
+let cancel = document.querySelector(".cancel")
+const add = document.querySelector(".adds");
+
 create_quiz.style.display = "none";
-
-
 function displayQuiz() {
     create_quiz.style.display = "block";
     buttonShows.style.display = "none";
     doncequiz.style.display = "none";
-
-
 }
-
-let showCreate = document.querySelector(".buttonShow");
-showCreate.addEventListener("click", displayQuiz);
-
-
-// ------------------------------
-let buttonShows = document.querySelector(".buttonShow");
-let doncequiz = document.querySelector(".doncequiz");
-
 function hidShowInput() {
     create_quiz.style.display = "none";
     buttonShows.style.display = "block";
     doncequiz.style.display = "block";
 }
 
-let adds = document.getElementById("addss");
-let cancel = document.querySelector(".cancel")
-adds.addEventListener("click", hidShowInput);
-cancel.addEventListener("click", hidShowInput);
+//
+// get question 
+//
+function getQuestions() {
+    axios.get("/api/items").then(items => {
+        refreshDom(items.data);
+    })
+}
 
-
-
-//action for clik noe place of input-----------
-
-
-
-
-
-
-
-
-
-
-
-// create the dom------------------/////
+//
+//Send question to DOM
+//@para questions
+//
 function refreshDom(questions) {
     let container = document.getElementById('container');
     container.remove();
@@ -115,12 +103,10 @@ function refreshDom(questions) {
         newQuestion.appendChild(icons);
         icons.appendChild(pencil);
         icons.appendChild(trash);
-
-        //    console.log(newQuestion)
-        //    console.log(title);
+        
         document.body.appendChild(contain);
+        // good and bad questions
         let goodAnswers = document.getElementById(questionId);
-        console.log(goodAnswers);
         for (let element of goodAnswers.childNodes) {
             if (element.id == question.correctAnswer) {
                 element.style.background = "green";
@@ -130,16 +116,9 @@ function refreshDom(questions) {
         }
     });
 };
-
-
-// get question 
-function getQuestions() {
-    axios.get("/api/items").then(items => {
-        refreshDom(items.data);
-    })
-}
-
-// create question-----------------------------//
+//
+// create question
+//
 function creatItems() {
     let item_new = {};
     item_new.title = document.getElementById('question').value;
@@ -155,9 +134,9 @@ function creatItems() {
 
     // location.reload();
 }
-
-// delete itme form database -----------
-
+//
+// delete question
+//
 function removeQuestion(e) {
     e.preventDefault();
     if (e.target.id === "delete") {
@@ -170,13 +149,11 @@ function removeQuestion(e) {
     }
 }
 
-const add = document.querySelector(".adds");
-add.addEventListener("click", creatItems);
-getQuestions();
 
 
-// function to Update the data ---------
-
+//
+// Update question
+//
 function updateQuestion(e) {
     e.preventDefault();
     if (e.target.id === "edit") {
@@ -187,3 +164,11 @@ function updateQuestion(e) {
 
     }
 }
+
+//MAIN
+
+showCreate.addEventListener("click", displayQuiz);
+add.addEventListener("click", creatItems);
+adds.addEventListener("click", hidShowInput);
+cancel.addEventListener("click", hidShowInput);
+getQuestions();

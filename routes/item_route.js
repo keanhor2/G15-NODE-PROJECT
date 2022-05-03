@@ -21,7 +21,7 @@ router.post('/',(req,res) => {
     let newAnswer2 = req.body.answer2;
     let newAnswer3 =req.body.answer3;
     let newAnswer4 = req.body.answer4;
-    let newScore = req.body.score;
+    let newScore =parseInt(req.body.score);
     let newCorrectAnswer = req.body.correctAnswer;
     let isCreated = itemModel.createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newScore,newCorrectAnswer);
     console.log(newQuestions)
@@ -51,7 +51,7 @@ router.delete("/:id",(req, res)=>{
 })
 
 //Update the Data in Items--------
-router.patch("/:id",(req,res)=>{
+router.put("/:id",(req,res)=>{
     let id= req.params.id;
     let isUpdate = itemModel.updateQuestion(req.body,id)
     if(isUpdate){

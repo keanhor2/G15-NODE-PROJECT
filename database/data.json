@@ -1,32 +1,32 @@
 [
   {
-    "id": "730c5e10-2ea9-4ac2-b90a-a96d27e0e425",
-    "title": "WHWSKJDS",
-    "answer1": "ASDFSA",
-    "answer2": "ADFSD",
-    "answer3": "ASDFA",
-    "answer4": "ASDFA",
-    "score": "0",
+    "id": "896b7cbc-b7b9-4914-aef4-4e1a999c3670",
+    "title": "What is your name?",
+    "answer1": "somnak",
+    "answer2": "kskd,",
+    "answer3": "sfds",
+    "answer4": "fscdsfsd",
+    "score": 50,
     "correctAnswer": "A"
   },
   {
-    "id": "2f635278-a20d-479e-9140-d792232be553",
-    "title": "IOSDLJDAS",
-    "answer1": "ADFS",
-    "answer2": "ASDFSD",
-    "answer3": "DSAFD",
-    "answer4": "ASFDS",
-    "score": "0",
-    "correctAnswer": "C"
+    "id": "234c560b-fc6c-4127-ac7e-ac47fb1a94fd",
+    "title": "fdss",
+    "answer1": "adsfsadsfs",
+    "answer2": "asfd",
+    "answer3": "sdf",
+    "answer4": "sdafs",
+    "score": 20,
+    "correctAnswer": "B"
   },
   {
-    "id": "567975f1-7497-4465-8920-87579aea3dc7",
-    "title": "How are you sir?",
-    "answer1": "GOOD",
-    "answer2": "GOOD BYE",
-    "answer3": "well",
-    "answer4": "I am well.",
-    "score": "27",
-    "correctAnswer": "D"
+    "id": "38fa0403-9f1d-475f-8b04-e661c97eef43",
+    "title": "How is your day",
+    "answer1": "too bad",
+    "answer2": "Not too bad",
+    "answer3": "good",
+    "answer4": "well",
+    "score": 30,
+    "correctAnswer": "A"
   }
 ]

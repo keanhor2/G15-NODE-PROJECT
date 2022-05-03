@@ -110,3 +110,19 @@
 #D:hover{
     background: rgb(214, 232, 232);
 }
+
+.total{
+    background:#eee;
+    width: 40%;
+    padding: 150px 50px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#btnReplay,#btnReview,#btnExit{
+    padding: 10px 20px;
+    margin-top: 5px;
+    font-size:20px;
+    
+}
