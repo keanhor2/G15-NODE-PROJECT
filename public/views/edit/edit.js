@@ -9,16 +9,21 @@ let cancel = document.querySelector(".cancel")
 const add = document.querySelector(".adds");
 
 create_quiz.style.display = "none";
+
+
+
 function displayQuiz() {
     create_quiz.style.display = "block";
     buttonShows.style.display = "none";
     doncequiz.style.display = "none";
 }
-function hidShowInput() {
-    create_quiz.style.display = "none";
-    buttonShows.style.display = "block";
-    doncequiz.style.display = "block";
-}
+
+function hidShowInput(){
+    create_quiz.style.display="none";
+   buttonShows.style.display="block";
+   doncequiz.style.display="block";
+//    window.location.reload();
+}    
 
 //
 // get question 
@@ -83,7 +88,11 @@ function refreshDom(questions) {
         let pencil = document.createElement("i");
         pencil.className = "fa fa-pencil fa-2x cons";
         pencil.id = "edit";
+        // pencil.className="upDate";
+        // pecils.classList="upDates";
         pencil.addEventListener("click", updateQuestion);
+
+
 
         let trash = document.createElement("i");
         trash.className = "fa fa-trash-o fa-2x cons";
@@ -109,9 +118,9 @@ function refreshDom(questions) {
         let goodAnswers = document.getElementById(questionId);
         for (let element of goodAnswers.childNodes) {
             if (element.id == question.correctAnswer) {
-                element.style.background = "green";
+                element.style.background = "teal";
             }else{
-                element.style.background = "red"
+                element.style.background = "brown"
             }
         }
     });
@@ -150,19 +159,39 @@ function removeQuestion(e) {
 }
 
 
+// const add = document.querySelector(".adds");
+// add.addEventListener("click", creatItems);
+// getQuestions();
 
-//
-// Update question
-//
+
+// function to Update the data ---------
+let contains = document.querySelector("#container");
+let tiltels = document.querySelector("#question");
+
+// let checkUpdate = document.querySelector(".checkUpdate");
+
+let hidcontainer =document.querySelector(".containerse");
+let createQuiz =document.querySelector(".createQuiz");
+let hidcreatequiz = document.getElementsByName("createQuestion");
+
+let dataquiz = document.querySelector(".dataQuiz");
+hodhidupDates=document.querySelector(".hodhidupDates");
+
+hidcontainer.style.display="none";
+
 function updateQuestion(e) {
     e.preventDefault();
     if (e.target.id === "edit") {
+        hidcontainer.style.display="block";
+        createQuiz.style.display="none";
+        dataquiz.style.display="none";
+        hodhidupDates.style.display="none";
         let id = e.target.parentElement.parentElement.id;
-        console.log(id)
-        axios.patch("/api/items/:id" + id);
+        // checkUpdate.textContent=id;
+        axios.patch("/api/items/" + id);
         getQuestions();
-
     }
+
 }
 
 //MAIN

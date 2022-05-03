@@ -14,6 +14,16 @@ router.get('/',(req,res) => {
     res.send(questions);
 })
 
+// read one question
+router.get('/:id',(req,res) => {
+    let id = req.params.id;
+    let questions = itemModel.getQuestions();
+    for(let question of questions){
+        if(question.id ===id){
+            res.send(question);
+        }
+    }
+})
 //write items
 router.post('/',(req,res) => {
     let newQuestions = req.body.title;

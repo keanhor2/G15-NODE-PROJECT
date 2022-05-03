@@ -11,11 +11,19 @@ const domLengthQuestion = document.getElementById("lengthOfQuestion");
 const domScore = document.getElementById("score");
 const domTotalOfScore = document.querySelector(".total");
 const domTotalScore = document.getElementById("totalScore");
+const domReplay = document.getElementById("btnReplay");
 
-// get question to display
+
+// replay
+function Replay(e){
+    if(e.target.id =="btnReplay"){
+        location.reload();
+    }
+}
+document.body.addEventListener("click",Replay);
+
+
 let currentQuestion =0;
-
-
 //
 // set first question that we want to display.
 //
