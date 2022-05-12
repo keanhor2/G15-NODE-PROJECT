@@ -9,7 +9,7 @@ const itemModel = require("../models/item_model");
 
 // Define dynamic routes
 //read all items
-router.get('/',(req,res) => {
+router.get('/',(req,res) => {                        
     let questions = itemModel.getQuestions();
     res.send(questions);
 })

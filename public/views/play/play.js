@@ -69,7 +69,6 @@ function checkAnswer(choice){
             domTotalOfScore.style.display ="block";
         }
         if(currentQuestion < listQuestion.length){
-            
              renderQuestion(listQuestion);
              domScore.textContent = parseInt(listQuestion[currentQuestion].score); 
              currentQuestion += 1;
@@ -79,21 +78,28 @@ function checkAnswer(choice){
 }
 
 // compute score
+let indexOfQuestion = 0;
+let computeScore =0;
 function TotalScore(answer) {
-    if(score!== null){
+    if(answer!== null){
         axios.get("/api/items").then(res=>{
             let questions = res.data;
-            let computeScore =0;
-            console.log(score)
-            for(let question of questions){
-                if(answer===question.correctAnswer){
-                    computeScore += question.score
-                    console.log(computeScore);
-                }
-                domTotalScore.textContent ="Total Score : " + computeScore +"%";
-            }
-        })
+            if(indexOfQuestion >0){
+              let question = questions[indexOfQuestion-1];
+                console.log(question);
+                console.log(question.correctAnswer)
 
+                if(indexOfQuestion<= questions.length){
+                    console.log(question.correctAnswer)
+                    if(question.correctAnswer === answer){
+                        console.log("correctAnswer")
+                        computeScore += question.score;
+                    }
+                    domTotalScore.textContent ="Total Score : " + computeScore +"%";
+                }
+            }
+            indexOfQuestion++;
+        })
     }
 }
 TotalScore();
