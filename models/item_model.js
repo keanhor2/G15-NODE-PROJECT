@@ -1,3 +1,4 @@
+const { get } = require('express/lib/response');
 const fs = require('fs');
 const { v4: uuidv4 }= require('uuid');
 
@@ -20,6 +21,22 @@ function getQuestions(){
     return getItems;
 }
 
+//get question one item
+// function getQuestion(id){
+//     // let status = false;
+//     // get all data
+//     let getItems = getDataOfitems(id);
+//     // define id of each question
+//     for(question of getItems){
+//         if(question.id ===id){
+
+//         }
+//     }
+//     // if(index !== -1){
+//     //     status = true;
+//     // }
+//     return getItems;
+// }
 // create question in quiz 
 function createQuestion(title,answer1,answer2,answer3,answer4,score,correctAnswer){
     //read items

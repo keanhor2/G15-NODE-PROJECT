@@ -1,52 +1,42 @@
 [
   {
-    "id": "b73d2266-276b-4f17-b30a-caff8a5ed2e5",
-    "title": "1.What is the simple present tense?",
-    "answer1": "Action and habit",
-    "answer2": "future",
-    "answer3": "specific time",
+    "id": "12bde30d-f5b9-4b8a-bbd0-b3cc4d9995f9",
+    "title": "What is the simple present tense?",
+    "answer1": "Talk about habit and present time",
+    "answer2": "past time",
+    "answer3": "about future",
     "answer4": "experience",
-    "score": "5",
+    "score": 5,
     "correctAnswer": "A"
   },
   {
-    "id": "f2cc6196-0805-4983-9763-6609d01e70dd",
-    "title": "2.What is HTML stand for?",
-    "answer1": "Technology",
-    "answer2": "HyperText Markup Language",
-    "answer3": "New language",
-    "answer4": "Computers",
-    "score": "5",
-    "correctAnswer": "B"
+    "id": "667fa867-eff1-4ef8-819d-a40bd697d8d3",
+    "title": "What is beautiful place for visit in combodia ?",
+    "answer1": "High Building",
+    "answer2": "Mountain boko",
+    "answer3": "Phnom Penh",
+    "answer4": "AngKor wat",
+    "score": 10,
+    "correctAnswer": "A"
   },
   {
-    "id": "5f94779d-526e-45d6-9a33-c243085fb61a",
-    "title": "What is the correct simple present tense form?",
-    "answer1": "S+ V2 + obj",
-    "answer2": "S+ V3 +O",
-    "answer3": "S + V + O",
-    "answer4": "S + V(ing) + O",
-    "score": "5",
+    "id": "84ef146e-6e0c-46e3-88ab-d1f8bbd08f64",
+    "title": "Where is the Angkor wat province place?",
+    "answer1": "Kataiv province",
+    "answer2": "KanDal Province",
+    "answer3": "Seam Raim Province",
+    "answer4": "Keb province",
+    "score": 5,
     "correctAnswer": "C"
   },
   {
-    "id": "83bc23be-4f89-4dd6-a7bd-41c020faf0f3",
-    "title": "What is correct sentence the box bellow?",
-    "answer1": "She is my her student.",
-    "answer2": "You are my mine.",
-    "answer3": "You will take mine to you.",
-    "answer4": "She loves cats.",
-    "score": "5",
-    "correctAnswer": "D"
-  },
-  {
-    "id": "467465c9-a839-4399-a09d-3dee3e291ea7",
-    "title": "what is the Simple past tense?",
-    "answer1": "S + Obj",
-    "answer2": "S + V2 +O",
-    "answer3": "S + V3 + O",
-    "answer4": "S + Ving + O",
-    "score": "5",
-    "correctAnswer": "B"
+    "id": "96789092-9a6e-4e80-8136-c64252914d16",
+    "title": "What is the the province far from Phnom Phenh ?",
+    "answer1": "Seam Riam Province",
+    "answer2": "Kandal Province",
+    "answer3": "Rotanakiri Province",
+    "answer4": "Mondul Kriri Province",
+    "score": 5,
+    "correctAnswer": "C"
   }
 ]

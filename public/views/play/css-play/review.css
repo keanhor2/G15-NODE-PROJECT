@@ -1,0 +1,140 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.head{
+    margin-top: 0%;
+    display: flex;
+    width: 950px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+    background: rgb(159, 223, 223);
+
+}
+
+.dons{
+    padding: 10px 10px;
+    border-radius: 5px;
+
+}
+.dons,.images{
+    width: 450px;
+
+}
+.images{
+    border: solid 1px rgb(70, 125, 125);
+}
+
+.don_quizs{
+    margin: auto;
+}
+.don_quiz{
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.question{
+    margin: auto;
+} 
+.question{
+    margin-top: 20px;
+    width: 950px;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+    background: rgb(222, 222, 222);
+    border: solid 1px rgb(176, 176, 176);
+}
+.title_quiz{
+    display: flex;
+    margin-top: 0%;
+    height: 3.5vh;
+    background: rgb(150, 162, 162);
+    margin: 20px 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 25px;
+}
+.choose{
+    display: flex;
+    width: 20%;
+}
+.choose,#correctAnswers{
+    width: 7rem;
+    text-align: center;
+    justify-content: center;
+}
+.score{
+    display: flex;
+}
+.score,
+.scores{
+    width: 200px;
+}
+.choose, span{
+    width: 200px;
+}
+.answers{
+    width: 500px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.answer_one,.answer_two,.answer_three,.answer_four{
+    background: rgb(160, 164, 164);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 8px;
+    padding: 5px 5px;
+}
+.title_quiz,.answers{
+    margin-top: 10px;
+    padding: 5px 25px;
+}
+.icons{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.cons{
+    width: 40px;
+    justify-content: space-between;
+    padding: 4px 4px;
+}
+
+.buttonExit{
+    width: 120px;
+    margin: 10px 1300px;
+    display: flex;
+    border-radius: 5px;
+    height: 4vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+.leave,a{
+    text-decoration: none;
+}
+.leave{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-align: center;
+}
+

@@ -98,6 +98,8 @@
     font-size: 40px;
 }
 
+
+
 #A:hover{
     background: rgb(214, 232, 232);
 }
@@ -111,3 +113,31 @@
 #D:hover{
     background: rgb(214, 232, 232);
 }
+
+.total{
+    background:#eee;
+    width: 40%;
+    padding: 150px 50px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#btnReplay,#btnReview,#btnExit{
+    width: 180px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size:20px;
+    
+}
+.review,.reviews{
+    display: flex;
+    width: 180px;
+    font-size: 18px;
+    margin: auto;
+    padding: 15px 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+

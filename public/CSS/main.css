@@ -49,7 +49,7 @@
     .image_start {
         display: flex;
         margin: auto;
-        width: 65%;
+        width: 60%;
         justify-content: center;
         border-radius: 5px;
     }
@@ -58,7 +58,7 @@
     .star_exit .start_next {
         display: flex;
         padding: 10px 10px;
-        width: 800px;
+        width: 660px;
         margin: auto;
         font-size: 25px;
         text-align: center;
@@ -156,7 +156,10 @@
         justify-content: center;
         margin: auto;
     }
-    
+    .nexts{
+        margin-left: 8px;
+    }
+
     input[type=text],
     input[type=text] {
         width: 700px;
@@ -172,7 +175,7 @@
     
     .bubmitss {
         display: flex;
-        margin: 20px 88px;
+        margin: 20px 78px;
         width: 680px;
         height: 3.5vh;
         border-radius: 5px;
@@ -188,7 +191,7 @@
     
     .requests,
     .Request {
-        padding: 10px 5px;
+        padding: 10px 2px;
         display: flex;
         width: 400px;
         height: 4vh;

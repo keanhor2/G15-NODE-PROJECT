@@ -14,6 +14,16 @@ router.get('/',(req,res) => {
     res.send(questions);
 })
 
+// read one question
+router.get('/:id',(req,res) => {
+    let id = req.params.id;
+    let questions = itemModel.getQuestions();
+    for(let question of questions){
+        if(question.id ===id){
+            res.send(question);
+        }
+    }
+})
 //write items
 router.post('/',(req,res) => {
     let newQuestions = req.body.title;
@@ -21,7 +31,7 @@ router.post('/',(req,res) => {
     let newAnswer2 = req.body.answer2;
     let newAnswer3 =req.body.answer3;
     let newAnswer4 = req.body.answer4;
-    let newScore = req.body.score;
+    let newScore =parseInt(req.body.score);
     let newCorrectAnswer = req.body.correctAnswer;
     let isCreated = itemModel.createQuestion(newQuestions,newAnswer1,newAnswer2,newAnswer3,newAnswer4,newScore,newCorrectAnswer);
     console.log(newQuestions)
@@ -51,7 +61,7 @@ router.delete("/:id",(req, res)=>{
 })
 
 //Update the Data in Items--------
-router.patch("/:id",(req,res)=>{
+router.put("/:id",(req,res)=>{
     let id= req.params.id;
     let isUpdate = itemModel.updateQuestion(req.body,id)
     if(isUpdate){

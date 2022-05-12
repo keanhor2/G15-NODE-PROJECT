@@ -1,30 +1,3 @@
-// start code here -----------------------
-let create_quiz = document.querySelector(".create_quiz");
-let showCreate = document.querySelector(".buttonShow");
-let buttonShows = document.querySelector(".buttonShow");
-let doncequiz = document.querySelector(".doncequiz");
-
-let adds = document.getElementById("addss");
-let cancel = document.querySelector(".cancel")
-const add = document.querySelector(".adds");
-
-create_quiz.style.display = "none";
-
-
-
-function displayQuiz() {
-    create_quiz.style.display = "block";
-    buttonShows.style.display = "none";
-    doncequiz.style.display = "none";
-}
-
-function hidShowInput(){
-    create_quiz.style.display="none";
-   buttonShows.style.display="block";
-   doncequiz.style.display="block";
-//    window.location.reload();
-}    
-
 //
 // get question 
 //
@@ -38,7 +11,7 @@ function getQuestions() {
 //Send question to DOM
 //@para questions
 //
-function refreshDom(questions) {
+function refreshDom(questions){
     let container = document.getElementById('container');
     container.remove();
     let contain = document.createElement('div');
@@ -110,8 +83,8 @@ function refreshDom(questions) {
         answers.appendChild(answer3);
         answers.appendChild(answer4);
         newQuestion.appendChild(icons);
-        icons.appendChild(pencil);
-        icons.appendChild(trash);
+        // icons.appendChild(pencil);
+        // icons.appendChild(trash);
         
         document.body.appendChild(contain);
         // good and bad questions
@@ -165,27 +138,22 @@ function removeQuestion(e) {
 
 
 // function to Update the data ---------
-let contains = document.querySelector("#container");
-let tiltels = document.querySelector("#question");
+// let contains = document.querySelector("#container");
+// let tiltels = document.querySelector("#question");
 
-// let checkUpdate = document.querySelector(".checkUpdate");
+// // let checkUpdate = document.querySelector(".checkUpdate");
 
-let hidcontainer =document.querySelector(".containerse");
-let createQuiz =document.querySelector(".createQuiz");
-let hidcreatequiz = document.getElementsByName("createQuestion");
+// let hidcontainer =document.querySelector(".containerse");
+// let createQuiz =document.querySelector(".createQuiz");
+// let hidcreatequiz = document.getElementsByName("createQuestion");
 
-let dataquiz = document.querySelector(".dataQuiz");
-hodhidupDates=document.querySelector(".hodhidupDates");
+// let dataquiz = document.querySelector(".dataQuiz");
+// hodhidupDates=document.querySelector(".hodhidupDates");
 
-hidcontainer.style.display="none";
 
 function updateQuestion(e) {
     e.preventDefault();
     if (e.target.id === "edit") {
-        hidcontainer.style.display="block";
-        createQuiz.style.display="none";
-        dataquiz.style.display="none";
-        hodhidupDates.style.display="none";
         let id = e.target.parentElement.parentElement.id;
         // checkUpdate.textContent=id;
         axios.patch("/api/items/" + id);
@@ -196,8 +164,8 @@ function updateQuestion(e) {
 
 //MAIN
 
-showCreate.addEventListener("click", displayQuiz);
-add.addEventListener("click", creatItems);
-adds.addEventListener("click", hidShowInput);
-cancel.addEventListener("click", hidShowInput);
+// showCreate.addEventListener("click", displayQuiz);
+// add.addEventListener("click", creatItems);
+// adds.addEventListener("click", hidShowInput);
+// cancel.addEventListener("click", hidShowInput);
 getQuestions();
